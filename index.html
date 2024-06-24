@@ -11,7 +11,19 @@
       window.onload = function() {
         let c = `; ${document.cookie}`;
         let v = c.split("; flipper=");
-        alert("cookie='"+v+"'");
+        if (v=="; ") {
+          c = "Hello";
+        } else {
+          c = v[1];
+        }
+        let l = document.querySelector("body");
+        l.textContent = c;
+        if(c=="Hello") {
+          c = "World";
+        } else {
+          c = "Hello";
+        }
+        document.cookie = `flipper=${c}`;
       };
     </script>
   </head>
