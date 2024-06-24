@@ -8,8 +8,10 @@
     <title>Flipper!</title>
     <script type="text/javascript">
       window.onload = function() {
-        document.cookie = "flipper=Hello";
-        alert("cookie='"+document.cookie+"'");
+      window.onload = function() {
+        let c = `; ${document.cookie}`;
+        let v = c.split("; flipper=");
+        alert("cookie='"+v+"'");
       };
     </script>
   </head>
