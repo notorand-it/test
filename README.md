@@ -22,7 +22,7 @@ This is the simplest implementation I can think of.
 I will use a simple docker image to run NGINX and serve that page.  
 By doing so i will be able to run it anywhere a docker container can be run.  
 Also locally, as I am using a Linux machine with docker v26.1.4.  
-On masOS is basically the same.  
+On macOS is basically the same.  
 On Windows ... use the Force/WSL, Luke!
 
 
