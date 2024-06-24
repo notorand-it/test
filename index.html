@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Pragma" content="no-cache" /> <!-- http 1.0 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /> <!-- http 1.1 -->
+    <meta http-equiv="Expires" content="0" /> <!-- proxy -->
+    <title>Flipper!</title>
+    <script type="text/javascript">
+      window.onload = function() {
+      window.onload = function() {
+        let c = `; ${document.cookie}`;
+        let v = c.split("; flipper=");
+        if (v=="; ") {
+          c = "Hello";
+        } else {
+          c = v[1];
+        }
+        let l = document.querySelector("body");
+        l.textContent = c;
+        if(c=="Hello") {
+          c = "World";
+        } else {
+          c = "Hello";
+        }
+        document.cookie = `flipper=${c}`;
+      };
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
