@@ -31,8 +31,8 @@ On macOS is basically the same.
 On Windows ... use the Force/WSL, Luke!  
 
 ## Building
-In the repository main directory run:
-`docker build --network host -t datenna .`
+In the repository main directory run:  
+`docker build --network host -t datenna .`  
 The `--network host` is needed to make sure `apk` can access the internet!  
 
 ## Running
@@ -40,7 +40,7 @@ The `--network host` is needed to make sure `apk` can access the internet!
 
 ## Accessing
 Point your browser to one of your IP addresses, HTTP protocol, port 8080.  
-In my case I have `http://192.168.255.42:8080`.  
+In my case I have `http://192.168.255.42:8080`: YMMV.  
 Hitting F5 or refreshing the page will show the flipping.
 
 ## Beware!
