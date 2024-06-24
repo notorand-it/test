@@ -30,10 +30,24 @@ Also locally, as I am using a Linux machine with docker v26.1.4.
 On macOS is basically the same.  
 On Windows ... use the Force/WSL, Luke!  
 
+## Building
+In the repository main directory run:
+`docker build --network host -t datenna .`
+The `--network host` is needed to make sure `apk` can access the internet!  
+
+## Running
+`docker run -td -p 8080:8080 datenna`
+
+## Accessing
+Point your browser to one of your IP addresses, HTTP protocol, port 8080.  
+In my case I have `http://192.168.255.42:8080`.  
+Hitting F5 or refreshing the page will show the flipping.
+
 ## Beware!
-Visiting the service/page from another browser or session will "reset" the flipping status!
+Visiting the service/page from another browser or completely new session will "reset" the flipping status!  
+It's the cookie, baby, the cookie, and there is nothing you can do about it!
 
 # Implementation: Take 2
-We are not doing this now. The idea is to have a server application and status. 
+I am not doing this now. The idea is to have a server application and status. 
 We'd need some runtime (like Node.JS and the likes) and a persistent status storage (like a DB or even just a file).
 
